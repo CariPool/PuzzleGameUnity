@@ -695,6 +695,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4a57ff0cfef09845a790129fa5f03f4, type: 3}
+--- !u!114 &482825489 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7719757106440513081, guid: e4a57ff0cfef09845a790129fa5f03f4, type: 3}
+  m_PrefabInstance: {fileID: 482825488}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &552589283 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6854450472707518031, guid: fed77f2aea0b8c54fabb59a3472c10c8, type: 3}
@@ -1458,9 +1469,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2089887864}
     - target: {fileID: 6144206762456423614, guid: c932e5d762aec9f428c8ce38a5e57b76, type: 3}
+      propertyPath: levelText
+      value: 
+      objectReference: {fileID: 482825489}
+    - target: {fileID: 6144206762456423614, guid: c932e5d762aec9f428c8ce38a5e57b76, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1556914658}
+    - target: {fileID: 6144206762456423614, guid: c932e5d762aec9f428c8ce38a5e57b76, type: 3}
+      propertyPath: currentLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6144206762456423614, guid: c932e5d762aec9f428c8ce38a5e57b76, type: 3}
       propertyPath: levelExitDoor
       value: 

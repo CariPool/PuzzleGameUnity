@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,10 +22,19 @@ public class GameManager : MonoBehaviour
     private bool isLever01ON = false;
     private bool isLever02ON = false;
 
+    public TextMeshProUGUI levelText;
+    public int currentLevel;
+
     void Start()
     {
         Instantiate(playerPrefabs, spawnPoint.position, spawnPoint.rotation);
+
+        if (levelText  != null ) 
+        {
+            levelText.text = $"Level : {currentLevel}";
+        }
     }
+
 
     // Update is called once per frame
     void Update()
