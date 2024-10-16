@@ -8,9 +8,11 @@ public class InteractableLever : InteractableObject
     private bool IsToggled;
     public Sprite toggleSprite;
 
+    private AudioSource _audiosource;
+
     void Start()
     {
-
+        _audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,8 @@ public class InteractableLever : InteractableObject
         IsToggled = true;
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
         sprite.sprite = toggleSprite;
+
+        _audiosource.Play();
 
         Destroy(this, 1f);
     }

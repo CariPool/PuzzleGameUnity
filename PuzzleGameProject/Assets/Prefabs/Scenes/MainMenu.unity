@@ -1158,6 +1158,7 @@ MonoBehaviour:
   optionsButton: {fileID: 2007285492}
   creditsButton: {fileID: 2105318978}
   quitButton: {fileID: 1133523966}
+  optionsPanel: {fileID: 1687758573}
 --- !u!4 &937422924
 Transform:
   m_ObjectHideFlags: 0
@@ -1659,6 +1660,7 @@ GameObject:
   - component: {fileID: 1687758574}
   - component: {fileID: 1687758576}
   - component: {fileID: 1687758575}
+  - component: {fileID: 1687758577}
   m_Layer: 5
   m_Name: OptionPanel
   m_TagString: Untagged
@@ -1727,6 +1729,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687758573}
   m_CullTransparentMesh: 1
+--- !u!114 &1687758577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687758573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0739bba406b8c542a029c04182d0a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundSlider: {fileID: 1665888619}
+  closeButton: {fileID: 121308089}
 --- !u!1 &1691216969
 GameObject:
   m_ObjectHideFlags: 0
