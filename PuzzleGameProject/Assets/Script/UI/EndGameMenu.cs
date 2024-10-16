@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGameMenu : MonoBehaviour
 {
@@ -14,5 +15,15 @@ public class EndGameMenu : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void RestartButtonClick()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void MainMenuButtonClick()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

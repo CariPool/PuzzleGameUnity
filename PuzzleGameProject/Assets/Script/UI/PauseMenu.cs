@@ -23,6 +23,7 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Quitting the game...");
         //Application.Quit(); // Quits the application. Won't work in the editor.
         // Or load the main menu:
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 }

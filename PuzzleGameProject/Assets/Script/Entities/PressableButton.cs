@@ -4,42 +4,35 @@ using UnityEngine;
 
 public class PressableButton : PressabableObject
 {
-
     public Transform button;
 
-    
-
-    [SerializeField]private float pressedY = -0.2f;
-    [SerializeField]private float normalY = 0.0f;
+    [SerializeField] private float pressedOffsetY = -0.2f; // Offset for the pressed position
     private float speed = 5.0f;
-
     private AudioSource _audioSource;
 
     public AudioClip buttonPressedSound;
     public AudioClip buttonReleasedSound;
 
     private int objectPressing = 0;
-
-
+    private Vector3 originalPosition; // Store the original position of the button
 
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-
+        originalPosition = button.position; // Initialize original position
     }
 
-    
     // Update is called once per frame
     void Update()
     {
-        float targetY = IsPressed() ? pressedY : normalY;
+        // Determine the target Y position relative to the original position
+        float targetY = IsPressed() ? originalPosition.y + pressedOffsetY : originalPosition.y;
 
         Vector3 currentPosition = button.position;
+        Vector3 targetPosition = new Vector3(originalPosition.x, targetY, originalPosition.z);
 
-        Vector3 targetPosition = new Vector3(currentPosition.x, targetY, currentPosition.z);
+        // Smoothly interpolate the button's position to the target position
         button.position = Vector3.Lerp(currentPosition, targetPosition, speed * Time.deltaTime);
-
-
     }
 
     public override bool IsPressed()
@@ -51,7 +44,7 @@ public class PressableButton : PressabableObject
     {
         objectPressing++;
 
-        if (objectPressing == 1) 
+        if (objectPressing == 1)
         {
             SetIsPressed(true);
             _audioSource.PlayOneShot(buttonPressedSound);
@@ -67,8 +60,5 @@ public class PressableButton : PressabableObject
             SetIsPressed(false);
             _audioSource.PlayOneShot(buttonReleasedSound);
         }
-
-
-       
     }
 }
